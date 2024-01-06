@@ -13,7 +13,7 @@ export default function Join({ setChatVisibility, setSocket }) {
 
         if (!username.trim()) return
 
-        const socket = await io.connect('http://localhost:3000');
+        const socket = await io.connect('https://chat-realtime-nodejs.vercel.app/');
         socket.emit('setUsername', username);
         setSocket(socket);
         setChatVisibility(true);
